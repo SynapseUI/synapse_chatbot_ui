@@ -1,6 +1,6 @@
 {
   "name": "synapsefi-chatbot-ui",
-  "version": "1.1.26",
+  "version": "1.1.27",
   "description": "Synapse Chatbot UI components.",
   "main": "index.js",
   "license": "MIT",
