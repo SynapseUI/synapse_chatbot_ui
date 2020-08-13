@@ -245,7 +245,7 @@ const TextBubble = (props) => {
     }
   }
   let pcontent;
-  if (content.includes('\n')) {
+  if (content && content.includes('\n')) {
     pcontent = content.split('\n').map(ele => {
       return (
         <div>
