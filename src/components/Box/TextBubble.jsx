@@ -244,7 +244,19 @@ const TextBubble = (props) => {
       );
     }
   }
-
+  let pcontent;
+  if (content.includes('\n')) {
+    pcontent = content.split('\n').map(ele => {
+      return (
+        <div>
+          { ele }
+          <br />
+        </div>
+      )
+    })
+  } else {
+    pcontent = content;
+  }
   return (
     <div style={withTail ? { width: "100%" } : null}>
 			{
@@ -265,7 +277,7 @@ const TextBubble = (props) => {
         step={step}
         withTail={withTail}
       >
-        {content}
+        {pcontent}
         {list}
         {stepImage ? (
           <div style={{ display: "block" }}>
