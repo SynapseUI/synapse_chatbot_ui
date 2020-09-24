@@ -20,21 +20,7 @@ class Home extends Component {
   render() {
     const { message, isOpen } = this.state;
     const stepOne = {
-      autoTrigger: true,
-      content: null,
-      created_date: 1595307471893,
-      hideUndo: true,
-      image: true,
-      meta: {name: "A Sample PDF.pdf", size: 9689, id: "pbmVhcml6ZWQgMQ0KL0wgOTY4OQ0KL0ggWyA5MzAgMTYyIF0NCi9"},
-      pdf: true,
-      preview: false,
-      remove: false,
-      sender_type: "USER",
-      trigger: 6,
-      type: "FILE_UPLOAD",
-      upload_type: "application/pdf",
-      user: true,
-      upload: true
+      content: 'hwlerer ahsdfadsf',
     }
     return (
       <div>
@@ -55,12 +41,6 @@ class Home extends Component {
           <TextBubble
             step={stepOne}
             content={stepOne.content}
-            user
-            stepImage={!stepOne.content && stepOne.image}
-            clientColor="000"
-            bubbleColor="f4f4f4"
-            bubbleBorder="f4f4f4"
-            horizontalImg
           />
           <Modal
             isOpen={isOpen}

@@ -28,7 +28,7 @@ const Bubble = styled.div`
     return "black";
   }};
 
-  border-radius: ${props => props.withTail ? '10px 10px 10px 0' : '10px'};
+  border-radius: ${props => props.withTail ? '10px 10px 10px 0px' : '10px'};
   border: ${(props) => {
     if (props.uploadBorder) return props.uploadBorder;
     if (props.border) return "solid 1px #D9D9D9";
@@ -244,7 +244,19 @@ const TextBubble = (props) => {
       );
     }
   }
-
+  let pcontent;
+  if (content && content.includes('\n')) {
+    pcontent = content.split('\n').map(ele => {
+      return (
+        <div>
+          { ele }
+          <br />
+        </div>
+      )
+    })
+  } else {
+    pcontent = content;
+  }
   return (
     <div style={withTail ? { width: "100%" } : null}>
 			{
@@ -265,7 +277,7 @@ const TextBubble = (props) => {
         step={step}
         withTail={withTail}
       >
-        {content}
+        {pcontent}
         {list}
         {stepImage ? (
           <div style={{ display: "block" }}>
