@@ -197,8 +197,8 @@ class InputGeneral extends Component {
         document.getElementById('input-box-wrapper-custom').style.height = '34px';
       }
     }
-    if (!isMobile)
-      document.getElementById("messages-content-wrapper").scrollIntoView(false);
+    // if (!isMobile)
+    //   document.getElementById("messages-content-wrapper").scrollIntoView(false);
       updateMessage(e);
   };
 
